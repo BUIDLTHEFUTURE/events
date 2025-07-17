@@ -1,0 +1,107 @@
+name: Proposal Scoring
+description: Score a proposal using the 5-part pScore rubric
+title: "Score Proposal: [Proposal ID or Name]"
+labels: [scoring, pscore]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧮 pScore Voting Rubric
+
+        Help us prioritize proposals based on **value-to-cost**.
+
+        Please rate this proposal on the following five criteria using a score of **1 to 5**:
+
+        - **5 = Excellent**
+        - **4 = Good**
+        - **3 = Fair**
+        - **2 = Weak**
+        - **1 = Poor**
+
+  - type: input
+    id: proposal_id
+    attributes:
+      label: Proposal ID or Name
+      description: Enter the identifier of the proposal you're scoring
+      placeholder: e.g. p002 - GnoFrames Toolkit
+    validations:
+      required: true
+
+  - type: dropdown
+    id: alignment
+    attributes:
+      label: Alignment with Event Goals
+      description: Does this proposal meaningfully support privacy, governance, or other listed themes?
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Practical Impact & Feasibility
+      description: Is this likely to deliver tangible value and be realistically implemented?
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: originality
+    attributes:
+      label: Originality & Vision
+      description: Does the idea demonstrate novel thinking or move the space forward?
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: decentralization
+    attributes:
+      label: Decentralization & Autonomy
+      description: Does it promote user sovereignty, reduce reliance on centralized actors, or improve resilience?
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ecosystem
+    attributes:
+      label: Ecosystem Contribution
+      description: Will this help grow the community, tools, or broader Gno.land ecosystem?
+      options:
+        - 5
+        - 4
+        - 3
+        - 2
+        - 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Optional Comments
+      description: Leave any supporting notes, reasoning, or suggestions here.
+      placeholder: e.g. "Great focus on onboarding. Could expand to cover governance edge cases."
+    validations:
+      required: false
